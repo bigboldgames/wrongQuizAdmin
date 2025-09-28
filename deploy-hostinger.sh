@@ -29,6 +29,8 @@ echo "🔥 Setting up firewall..."
 ufw allow 22
 ufw allow 80
 ufw allow 443
+ufw allow 5003
+ufw allow 3003
 ufw --force enable
 
 # Create project directory
