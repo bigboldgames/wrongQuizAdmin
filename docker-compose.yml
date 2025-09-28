@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  admin-panel:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=production
+      - PORT=5000
+      - JWT_SECRET=your-super-secret-jwt-key-for-production-2024
+    volumes:
+      - ./server/database:/app/server/database
+    restart: unless-stopped
+
+
