@@ -63,13 +63,13 @@ pm2 startup
 
 # Setup Nginx
 echo "🌐 Setting up Nginx..."
-cp nginx-config.conf /etc/nginx/sites-available/your-domain
-ln -s /etc/nginx/sites-available/your-domain /etc/nginx/sites-enabled/
+cp nginx-config.conf /etc/nginx/sites-available/wrongquizadmin
+ln -s /etc/nginx/sites-available/wrongquizadmin /etc/nginx/sites-enabled/
 rm /etc/nginx/sites-enabled/default
 nginx -t
 systemctl restart nginx
 
 echo "✅ Deployment completed successfully!"
-echo "🌐 Your app should be available at: http://your-domain.com"
+echo "🌐 Your app should be available at: http://wrongquizadmin.greatinternetwisdom.com"
 echo "📊 Check PM2 status: pm2 status"
 echo "📝 Check logs: pm2 logs"
